@@ -1,0 +1,2 @@
+C:\Utils\.Net Juris Utils\Juris Utility Base\JurisUtilityBase\bin\Release\JurisUtility.exe.config
+C:\Utils\.Net Juris Utils\Juris Utility Base\JurisUtilityBase\obj\Release\JurisUtilityBase.csproj.ResolveComReference.cache

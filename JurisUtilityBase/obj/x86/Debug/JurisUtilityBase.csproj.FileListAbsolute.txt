@@ -1,0 +1,87 @@
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\JurisUtilityBase.exe.config
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\JurisUtilityBase.exe
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\JurisUtilityBase.pdb
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\Gizmox.Extensions.dll
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\JurisAuthenticator.dll
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\JurisDBO21.dll
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\JurisIDef21.dll
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\JurisStr21.dll
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\JurisStr221.dll
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\JurisSVR21.dll
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\C1.Win.C1Input.4.dll
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\C1.C1Report.4.dll
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\C1.Win.C1Report.4.dll
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\Ionic.Zlib.dll
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\JurisAuthenticator.pdb
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\Gizmox.Extensions.pdb
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\JurisDBO21.pdb
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\JurisSVR21.pdb
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\JurisStr21.pdb
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\JurisIDef21.pdb
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\JurisStr221.pdb
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\C1.Win.C1Input.4.xml
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\C1.C1Report.4.xml
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\C1.Win.C1Report.4.xml
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.csprojResolveAssemblyReference.cache
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.MainForm.resources
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.Properties.Resources.resources
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.csproj.GenerateResource.Cache
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.exe
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.pdb
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.SplashScreen.resources
+C:\Reports\Custom Utilities\2.7 Utility Source\JurisUtilityBase\JurisUtilityBase\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.csproj.ResolveComReference.cache
+C:\Reports\Custom Utilities\2.7 Utility Source\JurisUtilityBase\JurisUtilityBase\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.VoucherImportMain.resources
+C:\Reports\Custom Utilities\2.7 Utility Source\JurisUtilityBase\JurisUtilityBase\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.Properties.Resources.resources
+C:\Reports\Custom Utilities\2.7 Utility Source\JurisUtilityBase\JurisUtilityBase\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.SplashScreen.resources
+C:\Reports\Custom Utilities\2.7 Utility Source\JurisUtilityBase\JurisUtilityBase\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.csproj.GenerateResource.Cache
+C:\Reports\Custom Utilities\2.7 Utility Source\JurisUtilityBase\JurisUtilityBase\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.csprojResolveAssemblyReference.cache
+C:\Reports\Custom Utilities\2.7 Utility Source\JurisUtilityBase\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\VoucherImport.Net.exe.config
+C:\Reports\Custom Utilities\2.7 Utility Source\JurisUtilityBase\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\VoucherImport.Net.exe.manifest
+C:\Reports\Custom Utilities\2.7 Utility Source\JurisUtilityBase\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\VoucherImport.Net.application
+C:\Reports\Custom Utilities\2.7 Utility Source\JurisUtilityBase\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\VoucherImport.Net.exe
+C:\Reports\Custom Utilities\2.7 Utility Source\JurisUtilityBase\JurisUtilityBase\JurisUtilityBase\bin\x86\Debug\VoucherImport.Net.pdb
+C:\Reports\Custom Utilities\2.7 Utility Source\JurisUtilityBase\JurisUtilityBase\JurisUtilityBase\obj\x86\Debug\VoucherImport.Net.exe.manifest
+C:\Reports\Custom Utilities\2.7 Utility Source\JurisUtilityBase\JurisUtilityBase\JurisUtilityBase\obj\x86\Debug\VoucherImport.Net.application
+C:\Reports\Custom Utilities\2.7 Utility Source\JurisUtilityBase\JurisUtilityBase\JurisUtilityBase\obj\x86\Debug\VoucherImport.Net.exe
+C:\Reports\Custom Utilities\2.7 Utility Source\JurisUtilityBase\JurisUtilityBase\JurisUtilityBase\obj\x86\Debug\VoucherImport.Net.pdb
+C:\Reports\Custom Utilities\2.7 Utility Source\.Net Juris Utils\Voucher Import 3.0\JurisUtilityBase\bin\x86\Debug\VoucherImport.Net.exe.config
+C:\Reports\Custom Utilities\2.7 Utility Source\.Net Juris Utils\Voucher Import 3.0\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.csproj.ResolveComReference.cache
+C:\Reports\Custom Utilities\2.7 Utility Source\.Net Juris Utils\Voucher Import 3.0\JurisUtilityBase\obj\x86\Debug\VoucherImport.Net.exe
+C:\Reports\Custom Utilities\2.7 Utility Source\.Net Juris Utils\Voucher Import 3.0\JurisUtilityBase\obj\x86\Debug\VoucherImport.Net.pdb
+C:\Reports\Custom Utilities\2.7 Utility Source\.Net Juris Utils\Voucher Import 3.0\JurisUtilityBase\bin\x86\Debug\VoucherImport.Net.exe.manifest
+C:\Reports\Custom Utilities\2.7 Utility Source\.Net Juris Utils\Voucher Import 3.0\JurisUtilityBase\bin\x86\Debug\VoucherImport.Net.application
+C:\Reports\Custom Utilities\2.7 Utility Source\.Net Juris Utils\Voucher Import 3.0\JurisUtilityBase\bin\x86\Debug\VoucherImport.Net.exe
+C:\Reports\Custom Utilities\2.7 Utility Source\.Net Juris Utils\Voucher Import 3.0\JurisUtilityBase\bin\x86\Debug\VoucherImport.Net.pdb
+C:\Reports\Custom Utilities\2.7 Utility Source\.Net Juris Utils\Voucher Import 3.0\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.csprojResolveAssemblyReference.cache
+C:\Reports\Custom Utilities\2.7 Utility Source\.Net Juris Utils\Voucher Import 3.0\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.VoucherImportMain.resources
+C:\Reports\Custom Utilities\2.7 Utility Source\.Net Juris Utils\Voucher Import 3.0\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.Properties.Resources.resources
+C:\Reports\Custom Utilities\2.7 Utility Source\.Net Juris Utils\Voucher Import 3.0\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.SplashScreen.resources
+C:\Reports\Custom Utilities\2.7 Utility Source\.Net Juris Utils\Voucher Import 3.0\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.csproj.GenerateResource.Cache
+C:\Reports\Custom Utilities\2.7 Utility Source\.Net Juris Utils\Voucher Import 3.0\JurisUtilityBase\obj\x86\Debug\VoucherImport.Net.exe.manifest
+C:\Reports\Custom Utilities\2.7 Utility Source\.Net Juris Utils\Voucher Import 3.0\JurisUtilityBase\obj\x86\Debug\VoucherImport.Net.application
+C:\Reports\Custom Utilities\2.7 Utility Source\.Net Juris Utils\.Net Utility Base\JurisUtilityBase\bin\x86\Debug\VoucherImport.Net.exe.config
+C:\Reports\Custom Utilities\2.7 Utility Source\.Net Juris Utils\.Net Utility Base\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.csproj.ResolveComReference.cache
+C:\Reports\Custom Utilities\2.7 Utility Source\.Net Juris Utils\.Net Utility Base\JurisUtilityBase\obj\x86\Debug\VoucherImport.Net.exe
+C:\Reports\Custom Utilities\2.7 Utility Source\.Net Juris Utils\.Net Utility Base\JurisUtilityBase\obj\x86\Debug\VoucherImport.Net.pdb
+C:\Utils\.Net Juris Utils\.Net Utility Base\JurisUtilityBase\bin\x86\Debug\VoucherImport.Net.exe.config
+C:\Utils\.Net Juris Utils\.Net Utility Base\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.csproj.ResolveComReference.cache
+C:\Utils\.Net Juris Utils\.Net Utility Base\JurisUtilityBase\obj\x86\Debug\VoucherImport.Net.exe
+C:\Utils\.Net Juris Utils\.Net Utility Base\JurisUtilityBase\obj\x86\Debug\VoucherImport.Net.pdb
+C:\Utils\.Net Juris Utils\.Net Utility Base\JurisUtilityBase\bin\x86\Debug\JurisUtility.exe.config
+C:\Users\haddocdx\Documents\Visual Studio 2012\Projects\Juris .Net Utility Base\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.csproj.ResolveComReference.cache
+C:\Users\haddocdx\Documents\Visual Studio 2012\Projects\Juris .Net Utility Base\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.UtilityBaseMain.resources
+C:\Users\haddocdx\Documents\Visual Studio 2012\Projects\Juris .Net Utility Base\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.Properties.Resources.resources
+C:\Users\haddocdx\Documents\Visual Studio 2012\Projects\Juris .Net Utility Base\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.SplashScreen.resources
+C:\Users\haddocdx\Documents\Visual Studio 2012\Projects\Juris .Net Utility Base\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.csproj.GenerateResource.Cache
+C:\Users\haddocdx\Documents\Visual Studio 2012\Projects\Juris .Net Utility Base\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.PrinterDialog.resources
+C:\Users\haddocdx\Documents\Visual Studio 2012\Projects\Juris .Net Utility Base\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.ReportDisplay.resources
+C:\Users\haddocdx\Documents\Visual Studio 2012\Projects\Juris .Net Utility Base\JurisUtilityBase\bin\x86\Debug\JPS - Copy Practice Class Code to MBF07.exe.config
+C:\Users\haddocdx\Documents\Visual Studio 2012\Projects\Juris .Net Utility Base\JurisUtilityBase\bin\x86\Debug\JPS - Copy Practice Class Code to MBF07.exe.manifest
+C:\Users\haddocdx\Documents\Visual Studio 2012\Projects\Juris .Net Utility Base\JurisUtilityBase\bin\x86\Debug\JPS - Copy Practice Class Code to MBF07.application
+C:\Users\haddocdx\Documents\Visual Studio 2012\Projects\Juris .Net Utility Base\JurisUtilityBase\bin\x86\Debug\JPS - Copy Practice Class Code to MBF07.exe
+C:\Users\haddocdx\Documents\Visual Studio 2012\Projects\Juris .Net Utility Base\JurisUtilityBase\bin\x86\Debug\JPS - Copy Practice Class Code to MBF07.pdb
+C:\Users\haddocdx\Documents\Visual Studio 2012\Projects\Juris .Net Utility Base\JurisUtilityBase\obj\x86\Debug\JurisUtilityBase.csprojResolveAssemblyReference.cache
+C:\Users\haddocdx\Documents\Visual Studio 2012\Projects\Juris .Net Utility Base\JurisUtilityBase\obj\x86\Debug\JPS - Copy Practice Class Code to MBF07.exe.manifest
+C:\Users\haddocdx\Documents\Visual Studio 2012\Projects\Juris .Net Utility Base\JurisUtilityBase\obj\x86\Debug\JPS - Copy Practice Class Code to MBF07.application
+C:\Users\haddocdx\Documents\Visual Studio 2012\Projects\Juris .Net Utility Base\JurisUtilityBase\obj\x86\Debug\JPS - Copy Practice Class Code to MBF07.exe
+C:\Users\haddocdx\Documents\Visual Studio 2012\Projects\Juris .Net Utility Base\JurisUtilityBase\obj\x86\Debug\JPS - Copy Practice Class Code to MBF07.pdb

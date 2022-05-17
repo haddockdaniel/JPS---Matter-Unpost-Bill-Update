@@ -1,0 +1,1 @@
+C:\Dev\Juris Scrum\Core\Branches\v2.7.1\Professional Services\JurisUtilityBase\JurisUtilityBase\bin\Debug\JurisUtilityBase.exe.config
