@@ -182,8 +182,8 @@ namespace JurisUtilityBase
                                         _jurisUtility.ExecuteNonQuery(0, sql);
                                 }
 
-                                updateBillDate(lastlhsys);
-                                updateLastHist(lastBillDate);
+                                getARBal(lastlhsys);
+                                updateLastHist(lastlhsys);
                                 updatePPD();
 
                                 MessageBox.Show("The process completed without error.", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -203,7 +203,7 @@ namespace JurisUtilityBase
             }
         }
 
-        private void updateBillDate(string lastlhsys)
+        private void getARBal(string lastlhsys)
         {
             //update the ar balance before the last bill
             string sql = " select ARBalances.lhmatter, sum(case when ARBalances.ARDue is null then 0 else ARBalances.ARDue end) as ARBal" +
@@ -247,13 +247,14 @@ namespace JurisUtilityBase
 
         }
 
-        private void updateLastHist(string lastBillDate)
+        private void updateLastHist(string lastlhsys)
         {
 
             //update last payment and adjustment amounts
             string sql = "select lhmatter, sum(case when lhtype in ('6', '7', '9') then LHCashAmt else 0.00 end) as pmt, " +
                 " sum(case when lhtype = '8' then ([LHFees] + [LHCshExp] + [LHNCshExp] + [LHSurcharge] + [LHTaxes1] + [LHTaxes2] + [LHTaxes3] + [LHInterest]) else 0.00 end) as adj " +
-                " from ledgerhistory where lhtype in ('6', '7', '8', '9') and lhmatter = " + matsysnbr.ToString() + " and lhdate >='" + lastBillDate + "' group by lhmatter";
+                " from ledgerhistory where lhtype in ('6', '7', '8', '9') and lhmatter = " + matsysnbr.ToString() + " and lhsysnbr >='" + lastlhsys + "' and " +
+                " lhbillnbr not in (select lhbillnbr from ledgerhistory where lhtype in ('A', 'B', 'C')) group by lhmatter";
             DataSet dds = _jurisUtility.RecordsetFromSQL(sql);
             if (dds == null || dds.Tables.Count == 0 || dds.Tables[0].Rows.Count == 0)
             {
