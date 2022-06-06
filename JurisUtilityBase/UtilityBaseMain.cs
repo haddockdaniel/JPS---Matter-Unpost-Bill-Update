@@ -152,33 +152,42 @@ namespace JurisUtilityBase
                         DialogResult dresult = MessageBox.Show("The last bill: " + lastBill.ToString() + " was unposted. Proceed to update matter?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (dresult == DialogResult.Yes)
                         {
+                            //get the last good, unposted bill and match the matter log with that date
+
+
+
                             //run the fix
-                            sql = "SELECT top 2 [ID], MatDateLastBill,MatARLastBill,MatAdjSinceLastBill,MatPaySinceLastBill " +
-                                 " FROM[Matter_Log] " +
-                                 "  where matsysnbr = " + matsysnbr.ToString() + " and recordtype = 2 " +
-                                 "  order by id desc;";
+                            sql =  "select max(lhbillnbr) as bn, convert(varchar, arbilldate, 101) as bd, lhsysnbr " +
+                                " from ledgerhistory inner join arbill on arbillnbr = lhbillnbr " +
+                                " where lhtype in ('3', '4') and lhbillnbr not in (select lhbillnbr from ledgerhistory where lhtype in ('A', 'B', 'C')) and lhmatter = " + matsysnbr.ToString() +
+                                "  group by convert(varchar, arbilldate, 101), lhsysnbr";
                             dds.Clear();
                             dds = _jurisUtility.RecordsetFromSQL(sql);
                             if (dds == null || dds.Tables.Count == 0 || dds.Tables[0].Rows.Count == 0)
                             {
-                                MessageBox.Show("There is no history in the log files. Contact Juris Professional Services", "Data Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("The unposted bill is the only bill that matter has." + "\r\n" + "No changes can be made to the matter.", "Data Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {
-                                int count = 1;
+                                string goodBill = "";
+                                string lastlhsys = "";
+                                string lastBillDate = "";
                                 foreach (DataRow dr in dds.Tables[0].Rows)
                                 {
-                                    if (count != 1)
-                                    {
-                                        sql = "update matter set MatDateLastBill = '" + dr[1].ToString() + "', MatARLastBill = " + dr[2].ToString() + ", " +
-                                            " MatAdjSinceLastBill = " + dr[3].ToString() + ", MatPaySinceLastBill = " + dr[3].ToString() + " where matsysnbr = " + matsysnbr.ToString();
+                                    goodBill = dr[0].ToString();
+                                    lastBillDate = dr[1].ToString();
+                                    lastlhsys = dr[2].ToString();
+                                    //update the last bill date
+                                    sql = "update matter set MatDateLastBill = '" + dr[1].ToString() + "' where matsysnbr = " + matsysnbr.ToString();
                                         _jurisUtility.ExecuteNonQuery(0, sql);
-                                    }
-                                    count++;
                                 }
+
+                                updateBillDate(lastlhsys);
+                                updateLastHist(lastBillDate);
+                                updatePPD();
+
                                 MessageBox.Show("The process completed without error.", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
-
                         }
                         else
                         {
@@ -192,6 +201,99 @@ namespace JurisUtilityBase
             {
                 MessageBox.Show("No matsys was found for that matter. Contact Juris Professional Services", "Finished", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
+        }
+
+        private void updateBillDate(string lastlhsys)
+        {
+            //update the ar balance before the last bill
+            string sql = " select ARBalances.lhmatter, sum(case when ARBalances.ARDue is null then 0 else ARBalances.ARDue end) as ARBal" +
+                  "   from " +
+                  "   (SELECT LedgerHistory.LHMatter, LedgerHistory.LHBillnbr, Sum(CASE WHEN LedgerHistory.LHType = '6' OR LedgerHistory.LHType = '7' OR LedgerHistory.LHType = '9' OR " +
+                  "           LedgerHistory.LHType = 'B' OR " +
+                  "           LedgerHistory.LHType = 'C' THEN(LedgerHistory.LHFees + LedgerHistory.LHCshExp + LedgerHistory.LHNCshExp + LedgerHistory.LHTaxes1 + LedgerHistory.LHTaxes2 + LedgerHistory.LHTaxes3 + LedgerHistory.LHSurcharge + LedgerHistory.LHInterest) * -1 " +
+                  "           ELSE(LedgerHistory.LHFees + LedgerHistory.LHCshExp + LedgerHistory.LHNCshExp + LedgerHistory.LHTaxes1 + LedgerHistory.LHTaxes2 + LedgerHistory.LHTaxes3 + LedgerHistory.LHSurcharge + LedgerHistory.LHInterest) " +
+                  "         END) AS ARDue " +
+                  "       FROM LedgerHistory " +
+                  "         LEFT JOIN(SELECT LastBillPost.LHBillNbr, LastBillPost.LHMatter, LedgerHistory.LHDate AS BillDate, LedgerHistory.LHFees + LedgerHistory.LHCshExp + LedgerHistory.LHNCshExp + LedgerHistory.LHInterest + LedgerHistory.LHTaxes1 + LedgerHistory.LHTaxes2 + " +
+                  "             LedgerHistory.LHTaxes3 + LedgerHistory.LHSurcharge AS OriginalBill " +
+                  "           FROM(SELECT LH1.LHBillNbr, LH1.LHMatter, Min(LH1.LHSysNbr) AS LastLHSysNbr " +
+                  "               FROM LedgerHistory AS LH1 " +
+                  "               WHERE(LH1.LHType IN('2', '3', '4')) " +
+                 "                GROUP BY LH1.LHBillNbr, LH1.LHMatter) AS LastBillPost " +
+                 "                INNER JOIN LedgerHistory ON LastBillPost.LastLHSysNbr = LedgerHistory.LHSysNbr) AS BillNumber ON LedgerHistory.LHBillNbr = BillNumber.LHBillNbr AND LedgerHistory.LHMatter = BillNumber.LHMatter " +
+                  "         WHERE(lhsysnbr <= " + lastlhsys + ") AND (LedgerHistory.LHType IN('2', '3', '4', '6', '7', '8', '9', 'A', 'B', 'C')) " +
+                 "         GROUP BY LedgerHistory.LHMatter, BillNumber.OriginalBill, BillNumber.BillDate, LedgerHistory.LHBillNbr) ARBalances " +
+                  "             INNER JOIN(SELECT ledgerhistory.lhmatter, Sum(CASE WHEN ledgerhistory.LHType = '6' OR ledgerhistory.LHType = '7' OR ledgerhistory.LHType = '9' OR ledgerhistory.LHType = 'B' OR " +
+                    "           ledgerhistory.LHType = 'C' THEN(ledgerhistory.LHFees + ledgerhistory.LHCshExp + ledgerhistory.LHNCshExp + ledgerhistory.LHTaxes1 + ledgerhistory.LHTaxes2 + ledgerhistory.LHTaxes3 + ledgerhistory.LHSurcharge + ledgerhistory.LHInterest) * -1 " +
+                      "         ELSE(ledgerhistory.LHFees + ledgerhistory.LHCshExp + ledgerhistory.LHNCshExp + ledgerhistory.LHTaxes1 + ledgerhistory.LHTaxes2 + ledgerhistory.LHTaxes3 + ledgerhistory.LHSurcharge + ledgerhistory.LHInterest) END) AS ARMatBal " +
+                        "   FROM ledgerhistory " +
+                 "          WHERE lhsysnbr <= " + lastlhsys + " and lhmatter = " + matsysnbr.ToString() +
+                   "        GROUP BY ledgerhistory.lhmatter ) lhmat ON lhmat.lhmatter = ARBalances.lhmatter group by ARBalances.lhmatter";
+
+            DataSet dds = _jurisUtility.RecordsetFromSQL(sql);
+            if (dds == null || dds.Tables.Count == 0 || dds.Tables[0].Rows.Count == 0)
+            {
+                sql = "update matter set  MatARLastBill = 0.00 where matsysnbr = " + matsysnbr.ToString();
+                _jurisUtility.ExecuteNonQuery(0, sql);
+            }
+            else
+            {
+                foreach (DataRow dr in dds.Tables[0].Rows)
+                {
+                    sql = "update matter set  MatARLastBill = " + dr[1].ToString() + " where matsysnbr = " + matsysnbr.ToString();
+                    _jurisUtility.ExecuteNonQuery(0, sql);
+                }
+            }
+
+        }
+
+        private void updateLastHist(string lastBillDate)
+        {
+
+            //update last payment and adjustment amounts
+            string sql = "select lhmatter, sum(case when lhtype in ('6', '7', '9') then LHCashAmt else 0.00 end) as pmt, " +
+                " sum(case when lhtype = '8' then ([LHFees] + [LHCshExp] + [LHNCshExp] + [LHSurcharge] + [LHTaxes1] + [LHTaxes2] + [LHTaxes3] + [LHInterest]) else 0.00 end) as adj " +
+                " from ledgerhistory where lhtype in ('6', '7', '8', '9') and lhmatter = " + matsysnbr.ToString() + " and lhdate >='" + lastBillDate + "' group by lhmatter";
+            DataSet dds = _jurisUtility.RecordsetFromSQL(sql);
+            if (dds == null || dds.Tables.Count == 0 || dds.Tables[0].Rows.Count == 0)
+            {
+                sql = "update matter set MatAdjSinceLastBill = 0.00, MatPaySinceLastBill = 0.00 where matsysnbr = " + matsysnbr.ToString();
+                _jurisUtility.ExecuteNonQuery(0, sql);
+            }
+            else
+            {
+                foreach (DataRow dr in dds.Tables[0].Rows)
+                {
+                    sql = "update matter set MatAdjSinceLastBill = " + dr[2].ToString() + ", MatPaySinceLastBill = " + dr[1].ToString() + " where matsysnbr = " + matsysnbr.ToString();
+                    _jurisUtility.ExecuteNonQuery(0, sql);
+                }
+            }
+
+
+        }
+
+        private void updatePPD()
+        {
+            //update ppd balance
+            string sql = "SELECT lhmatter, Sum(CASE WHEN LedgerHistory.lhtype = '5' OR " +
+                    " LedgerHistory.lhtype = '1' THEN LedgerHistory.lhcashamt WHEN LedgerHistory.lhtype = '6' OR LedgerHistory.lhtype = 'B' THEN LedgerHistory.lhcashamt * -1 ELSE 0 END) AS PrepaidBalance " +
+                " FROM ledgerhistory WHERE LedgerHistory.lhtype IN ('1', '5', '6', 'B') and lhmatter = " + matsysnbr.ToString() + " GROUP BY lhmatter";
+            DataSet dds = _jurisUtility.RecordsetFromSQL(sql);
+            if (dds == null || dds.Tables.Count == 0 || dds.Tables[0].Rows.Count == 0)
+            {
+                sql = "update matter set MatPPDBalance = 0.00 where matsysnbr = " + matsysnbr.ToString();
+                _jurisUtility.ExecuteNonQuery(0, sql);
+            }
+            else
+            {
+                foreach (DataRow dr in dds.Tables[0].Rows)
+                {
+                    sql = "update matter set MatPPDBalance = " + dr[1].ToString() + " where matsysnbr = " + matsysnbr.ToString();
+                    _jurisUtility.ExecuteNonQuery(0, sql);
+                }
+                
+            }
+
         }
 
         private bool isValidInt(string test)

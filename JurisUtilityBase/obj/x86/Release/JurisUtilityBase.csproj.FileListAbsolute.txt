@@ -89,11 +89,6 @@ D:\JPS - Template\JurisUtilityBase\obj\x86\Release\Waltrip Data Fix.exe.manifest
 D:\JPS - Template\JurisUtilityBase\obj\x86\Release\Waltrip Data Fix.application
 D:\JPS - Template\JurisUtilityBase\obj\x86\Release\Waltrip Data Fix.exe
 D:\JPS - Template\JurisUtilityBase\obj\x86\Release\Waltrip Data Fix.pdb
-D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\bin\x86\Release\Waltrip Data Fix.exe.config
-D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\bin\x86\Release\Waltrip Data Fix.exe.manifest
-D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\bin\x86\Release\Waltrip Data Fix.application
-D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\bin\x86\Release\Waltrip Data Fix.exe
-D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\bin\x86\Release\Waltrip Data Fix.pdb
 D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\bin\x86\Release\C1.C1Report.4.dll
 D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\bin\x86\Release\C1.Win.C1Input.4.dll
 D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\bin\x86\Release\C1.Win.C1Report.4.dll
@@ -117,8 +112,13 @@ D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\obj\x86\Release\Jur
 D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\obj\x86\Release\JurisUtilityBase.csproj.GenerateResource.cache
 D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\obj\x86\Release\JurisUtilityBase.csproj.CoreCompileInputs.cache
 D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\obj\x86\Release\JurisUtilityBase.csproj.Fody.CopyLocal.cache
-D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\obj\x86\Release\Waltrip Data Fix.exe.manifest
-D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\obj\x86\Release\Waltrip Data Fix.application
 D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\obj\x86\Release\JurisUtilityBase.csproj.CopyComplete
-D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\obj\x86\Release\Waltrip Data Fix.exe
-D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\obj\x86\Release\Waltrip Data Fix.pdb
+D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\bin\x86\Release\JPS - Matter Unpost Bill Update.exe.config
+D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\bin\x86\Release\JPS - Matter Unpost Bill Update.exe.manifest
+D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\bin\x86\Release\JPS - Matter Unpost Bill Update.application
+D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\bin\x86\Release\JPS - Matter Unpost Bill Update.exe
+D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\bin\x86\Release\JPS - Matter Unpost Bill Update.pdb
+D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\obj\x86\Release\JPS - Matter Unpost Bill Update.exe.manifest
+D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\obj\x86\Release\JPS - Matter Unpost Bill Update.application
+D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\obj\x86\Release\JPS - Matter Unpost Bill Update.exe
+D:\Projects\JPS - Matter Unpost Bill Update\JurisUtilityBase\obj\x86\Release\JPS - Matter Unpost Bill Update.pdb
